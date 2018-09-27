@@ -1,18 +1,9 @@
 import React from 'react';
-import MoviesSearchForm from './MoviesSearchForm';
-import MoviesList from './MoviesList';
 import qs from 'qs';
-import LoadMore from "./LoadMore";
+import Movies from "../ui/Movies";
+import {OMDB_URL} from "./constants";
 
-const NotFound = props => {
-  return (
-    <React.Fragment>
-      { props.notFound ? (<div>Movie not found</div>) : null}
-    </React.Fragment>
-  )
-};
-
-export default class Movies extends React.Component {
+export default class MoviesContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = this.getDefaultState()
@@ -51,7 +42,7 @@ export default class Movies extends React.Component {
     const nextState = this.getNextState()
     const {lastQuery: queryString, page} = nextState
 
-    return fetch(`http://www.omdbapi.com?apikey=128ccc64&${queryString}&page=${page}`, {method: 'GET'})
+    return fetch(`${OMDB_URL}&${queryString}&page=${page}`, {method: 'GET'})
       .then(response => {
         if (response.ok) {
           return response;
@@ -88,38 +79,19 @@ export default class Movies extends React.Component {
   };
 
   loadMore = () => {
-    console.log('this.state', this.state);
     this.fetchList(this.onFetchSuccess, this.onFetchError);
   };
 
-  renderSearchForm() {
-    return <MoviesSearchForm onSubmit={this.onSearchSubmit}/>
-  }
-
-  renderList() {
-    return <MoviesList list={this.state.movieList}/>
-  }
-
-  renderPagination() {
-    const { totalResults, movieList } = this.state;
-    if (!(totalResults > movieList.length)) {
-      return null;
-    }
-
-    return <LoadMore handleClick={this.loadMore} />
-  }
-
-  renderNotFound() {
-    return <NotFound notFound={this.state.notFound}/>
-  }
   render() {
+    const {movieList, totalResults, notFound} = this.state
     return (
-      <div>
-        {this.renderSearchForm()}
-        {this.renderNotFound()}
-        {this.renderList()}
-        {this.renderPagination()}
-      </div>
+      <Movies
+        onSearchSubmit={this.onSearchSubmit}
+        movieList={movieList}
+        totalResults={totalResults}
+        loadMore={this.loadMore}
+        notFound={notFound}
+      />
     )
   }
 }

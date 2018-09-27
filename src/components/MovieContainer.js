@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
-import Movie from "./Movie";
+import Movie from "../ui/Movie";
+import {OMDB_URL} from "./constants";
 
-class MovieFetcher extends Component {
+class MovieContainer extends Component {
 
   constructor(props) {
     super(props);
@@ -13,7 +14,7 @@ class MovieFetcher extends Component {
 
   fetchMovieData = (id, onSuccess, onError) => {
 
-    return fetch(`http://www.omdbapi.com?apikey=128ccc64&i=${id}`, {method: 'GET'})
+    return fetch(`${OMDB_URL}&i=${id}`, {method: 'GET'})
       .then(response => {
         if (response.ok) {
           return response;
@@ -45,4 +46,4 @@ class MovieFetcher extends Component {
   }
 }
 
-export default MovieFetcher;
+export default MovieContainer;

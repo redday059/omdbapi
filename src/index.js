@@ -6,9 +6,8 @@ import { createStore } from 'redux';
 import reducers from './reducers';
 import './index.css';
 import App from './App';
-import Movies from './components/Movies';
-import Movie from './components/Movie'
-import MovieFetcher from "./components/MovieFetcher";
+import MovieContainer from "./components/MovieContainer";
+import MoviesContainer from "./components/MoviesContainer";
 
 ReactDOM.render(
   <Provider store={createStore(reducers,
@@ -16,9 +15,8 @@ ReactDOM.render(
   }>
     <Router>
       <App>
-        <Route path='/' exact component={Movies}/>
-        <Route path='/movie/:id' component={MovieFetcher}/>
-        {/*<Route path='/movie/:id' component={Movie}/>*/}
+        <Route path='/' exact component={MoviesContainer}/>
+        <Route path='/movie/:id' component={MovieContainer}/>
       </App>
     </Router>
   </Provider>

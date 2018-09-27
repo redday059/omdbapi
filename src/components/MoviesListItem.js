@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 
 const MoviesListItem = (props) => {
   const { Poster, Title, Type, Year, imdbID} = props;
@@ -18,38 +18,22 @@ const MoviesListItem = (props) => {
         </div>
         <div className="col-9">
           <dl className="row">
-            <dt className="col-sm-4">Title:</dt>
-            <dd className="col-sm-8">{Title}</dd>
-            <dt className="col-sm-4">Type:</dt>
-            <dd className="col-sm-8">{Type}</dd>
-            <dt className="col-sm-4">Year:</dt>
-            <dd className="col-sm-8">{Year}</dd>
-            <dt className="col-sm-4">mdbID:</dt>
-            <dd className="col-sm-8">{imdbID}</dd>
+            <dt className="col-sm-5">Title:</dt>
+            <dd className="col-sm-7">{Title}</dd>
+            <dt className="col-sm-5">Type:</dt>
+            <dd className="col-sm-7">{Type}</dd>
+            <dt className="col-sm-5">Year:</dt>
+            <dd className="col-sm-7">{Year}</dd>
+            <dt className="col-sm-5">imdbID:</dt>
+            <dd className="col-sm-7">{imdbID}</dd>
           </dl>
         </div>
+        <Link className="btn btn-primary btn-danger" to={`/movie/${imdbID}`}>
+          Go to movie page
+        </Link>
       </div>
     </div>
   )
 };
 
 export default MoviesListItem;
-
-{/*<div>*/}
-{/*Title:*/}
-{/*{' '}*/}
-{/*{Title}*/}
-{/*</div>*/}
-{/*<div>*/}
-{/*Type:*/}
-{/*{' '}*/}
-{/*{Type}</div>*/}
-{/*<div>*/}
-{/*Year:*/}
-{/*{' '}*/}
-{/*{Year}</div>*/}
-{/*<div>*/}
-{/*mdbID:*/}
-{/*{' '}*/}
-{/*{imdbID}*/}
-{/*</div>*/}

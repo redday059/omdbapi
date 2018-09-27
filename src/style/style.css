@@ -1,3 +1,17 @@
-.row.p-3{
+.row.p-3, .o-h {
   overflow: hidden;
+}
+
+header {
+  width: 100%;
+  height: 5rem;
+  line-height: 5rem;
+  background-color: #333333;
+  margin-bottom: 3rem;
+  padding: 1rem 0;
+  color: #ffffff;
+}
+
+form {
+  margin-bottom: 3rem;
 }

@@ -1,7 +1,16 @@
 import React from 'react';
+import MoviesListItem from './MoviesListItem';
 
 export default class MoviesList extends React.Component {
   render() {
-    return <div>{this.props.list.map(item => <div>{item.Title}</div>)}</div>
+    if (!this.props.list){
+      return <div className="mt-3">No results found.</div>;
+    }
+    return (
+      <div className="container">
+        <div className="row">{this.props.list.map(item => MoviesListItem(item))}
+        </div>
+      </div>
+    )
   }
 }

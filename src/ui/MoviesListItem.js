@@ -28,7 +28,9 @@ const MoviesListItem = (props) => {
             <dd className="col-sm-7">{imdbID}</dd>
           </dl>
         </div>
-        <Link className="btn btn-primary btn-danger" to={`/movie/${imdbID}`}>
+      </div>
+      <div className="card-body d-flex flex-column">
+        <Link className="btn btn-primary btn-danger float-right btn-block mt-auto" to={`/movie/${imdbID}`}>
           Go to movie page
         </Link>
       </div>

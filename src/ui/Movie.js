@@ -11,7 +11,6 @@ const renderDescription = (movieDataItems) => {
                 Object.keys(movieDataItems[key]).map( i => (
                   <dl key={i} className="row">
                     <dt className="col-sm-5">{movieDataItems[key][i]['Source']}{':'}</dt>
-                    {/*<dd className="col-sm-7"> {(movieData[key][i]).toString()}</dd>*/}
                     <dd className="col-sm-7">{movieDataItems[key][i]['Value']}</dd>
                   </dl>
                 ))

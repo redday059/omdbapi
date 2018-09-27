@@ -11,14 +11,14 @@ const NotFound = props => {
   )
 };
 
-const Movies = ({onSearchSubmit, movieList, totalResults, loadMore, notFound}) => {
+const Movies = ({ onSearchSubmit, movieList, totalResults, loadMore, notFound }) => {
   const renderSearchForm = () => {
     return <MoviesSearchForm onSubmit={onSearchSubmit}/>
-  }
+  };
 
   const renderList = () => {
     return <MoviesList list={movieList}/>
-  }
+  };
 
   const renderPagination = () => {
     if (!(totalResults > movieList.length)) {
@@ -26,11 +26,11 @@ const Movies = ({onSearchSubmit, movieList, totalResults, loadMore, notFound}) =
     }
 
     return <LoadMore handleClick={loadMore} />
-  }
+  };
 
   const renderNotFound = () => {
     return <NotFound notFound={notFound}/>
-  }
+  };
 
     return (
       <div>
@@ -40,6 +40,6 @@ const Movies = ({onSearchSubmit, movieList, totalResults, loadMore, notFound}) =
         {renderPagination()}
       </div>
     )
-}
+};
 
 export default Movies;

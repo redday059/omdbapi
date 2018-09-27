@@ -1,7 +1,7 @@
 import React from 'react';
 import qs from 'qs';
 import Movies from "../ui/Movies";
-import {OMDB_URL} from "./constants";
+import { OMDB_URL } from "./constants";
 
 export default class MoviesContainer extends React.Component {
   constructor(props) {
@@ -36,11 +36,11 @@ export default class MoviesContainer extends React.Component {
         page: 1,
         formData
       };
-  }
+  };
 
   fetchList = (onSuccess, onError) => {
-    const nextState = this.getNextState()
-    const {lastQuery: queryString, page} = nextState
+    const nextState = this.getNextState();
+    const {lastQuery: queryString, page} = nextState;
 
     return fetch(`${OMDB_URL}&${queryString}&page=${page}`, {method: 'GET'})
       .then(response => {
@@ -83,7 +83,7 @@ export default class MoviesContainer extends React.Component {
   };
 
   render() {
-    const {movieList, totalResults, notFound} = this.state
+    const {movieList, totalResults, notFound} = this.state;
     return (
       <Movies
         onSearchSubmit={this.onSearchSubmit}

@@ -1,20 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ImageComponent from "../components/ImageComponent";
+import '../components/style.css'
 
 const MoviesListItem = (props) => {
   const { Poster, Title, Type, Year, imdbID} = props;
-  const sectionStyle = {
-    width: "100%",
-    height: "auto",
-    backgroundImage: `url(${Poster})`,
-    backgroundSize: 'contain',
-    backgroundRepeat: 'no-repeat',
-  };
 
   return (
     <div className="col-12 col-md-6 card" key={imdbID}>
       <div className="row p-3">
-        <div className="col-3" style={sectionStyle}>
+        <div className="col-3">
+          <ImageComponent
+            src={{ default: Poster }}
+            alt='movie poster'
+            width='100%'
+            className='image-preview'
+            withPreloader={true}
+          />
         </div>
         <div className="col-9">
           <dl className="row">
@@ -29,8 +31,8 @@ const MoviesListItem = (props) => {
           </dl>
         </div>
       </div>
-      <div className="card-body d-flex flex-column">
-        <Link className="btn btn-primary btn-danger float-right btn-block mt-auto" to={`/movie/${imdbID}`}>
+      <div className="card-body d-flex flex-row-reverse">
+        <Link className="btn btn-primary btn-danger float-right mt-auto" to={`/movie/${imdbID}`}>
           Go to movie page
         </Link>
       </div>

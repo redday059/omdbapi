@@ -1,0 +1,24 @@
+.hide {
+  opacity: 0!important;
+}
+
+.image-content {
+  width: 100%;
+  overflow: hidden;
+}
+
+.image-preview {
+  min-height: 150px;
+}
+
+.image-preview > div > img:first-child,
+.image-poster > div > img:first-child {
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 6px;
+}
+
+.image-poster {
+  min-height: 385px;
+  margin-bottom: 20px;
+  width: 100%;
+}

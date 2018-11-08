@@ -1,3 +1,9 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 .row.p-3, .o-h {
   overflow: hidden;
 }
@@ -14,4 +20,8 @@ header {
 
 form {
   margin-bottom: 3rem;
+}
+
+.active {
+  color: red;
 }

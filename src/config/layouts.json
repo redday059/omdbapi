@@ -1,0 +1,20 @@
+{
+  "xsmall": {
+    "max": 576
+  },
+  "small": {
+    "min": 576,
+    "max": 768
+  },
+  "medium": {
+    "min": 768,
+    "max": 992
+  },
+  "large": {
+    "min": 992,
+    "max": 1200
+  },
+  "xlarge": {
+    "min": 1200
+  }
+}

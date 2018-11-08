@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: 'Raisonne';
+  src: url('../fonts/RaisonneVelocity-DemiBold.woff2') format('woff2'),
+  url('../fonts/RaisonneVelocity-DemiBold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Relative-book';
+  src: url('../fonts/Relative-Book-Web.woff2') format('woff2'),
+  url('../fonts/Relative-Book-Web.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Relative-bold';
+  src: url('../fonts/Relative-Bold-Web.woff2') format('woff2'),
+  url('../fonts/Relative-Bold-Web.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

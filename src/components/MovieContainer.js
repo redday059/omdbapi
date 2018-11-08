@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import Movie from "../ui/Movie";
-import {OMDB_URL} from "./constants";
+import {OMDB_URL} from "../constants";
+import configWebfonts from "../config/webfonts-movie";
+import WebfontLoader from "./WebfontLoader";
 
 class MovieContainer extends Component {
 
@@ -42,7 +44,11 @@ class MovieContainer extends Component {
   }
 
   render() {
-    return <Movie movieData={this.state.movieData}/>
+    return (
+      <WebfontLoader {...configWebfonts}>
+        <Movie movieData={this.state.movieData} />
+      </WebfontLoader>
+    )
   }
 }
 

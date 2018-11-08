@@ -1,7 +1,7 @@
 import React from 'react';
 import qs from 'qs';
 import Movies from "../ui/Movies";
-import { OMDB_URL } from "./constants";
+import { OMDB_URL } from "../constants";
 
 export default class MoviesContainer extends React.Component {
   constructor(props) {

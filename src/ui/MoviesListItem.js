@@ -4,7 +4,7 @@ import ImageComponent from "../components/ImageComponent";
 import '../components/style.css'
 
 const MoviesListItem = (props) => {
-  const { Poster, Title, Type, Year, imdbID} = props;
+  const { Poster, Title, Type, Year, imdbID } = props;
 
   return (
     <div className="col-12 col-md-6 card" key={imdbID}>
@@ -12,11 +12,11 @@ const MoviesListItem = (props) => {
         <div className="col-3">
           {Poster !== 'N/A' ?
             <ImageComponent
-            src={{ default: Poster }}
-            alt='movie poster'
-            width='100%'
-            className='image-preview'
-            withPreloader={true}
+              src={{ default: Poster }}
+              alt='movie poster'
+              width='100%'
+              className='image-preview'
+              withPreloader={true}
             />
               : <div>No image</div>}
         </div>

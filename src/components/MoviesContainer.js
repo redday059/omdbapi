@@ -75,7 +75,10 @@ export default class MoviesContainer extends React.Component {
   onFetchError = data => console.log('Error', data);
 
   onSearchSubmit = (data) => {
-    this.setState({ formData: data }, () => this.fetchList(this.onFetchSuccess, this.onFetchError));
+    this.setState(
+      { ...this.getDefaultState(), formData: data },
+      () => this.fetchList(this.onFetchSuccess, this.onFetchError)
+    );
   };
 
   loadMore = () => {

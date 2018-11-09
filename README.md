@@ -1,3 +1,17 @@
+To get it up and runnign you need just:
+
+1. yarn
+2. yarn start
+
+It will try and connect to a public API from http://www.omdbapi.com/
+
+Main features
+- Lazy loaded images 
+- Async loading of the pages by demand
+- Font loader
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>

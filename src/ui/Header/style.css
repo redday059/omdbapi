@@ -1,0 +1,41 @@
+.navigation {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem auto 1rem;
+  justify-content: center;
+}
+
+.navlist {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  font-family: verdana, helvetica, arial, sans-serif;
+  font-size: 0.72em;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 0;
+  margin: 0.3rem 0 2rem;
+  text-align: center;
+}
+
+.navitem {
+  padding: 0 1.25rem;
+  line-height: 0.75rem;
+  height: 0.75rem;
+  margin: 0.2rem 0;
+}
+
+.navitem:first-child {
+  border-right: 1px solid #000;
+}
+
+.navlink {
+  display: block;
+  color: grey;
+  text-decoration: none;
+}
+
+.active {
+  color: black;
+}

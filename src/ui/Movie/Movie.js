@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
-import './movie.css';
-import ImageComponent from "../components/ImageComponent";
+import './index.css';
+import ImageComponent from "./../../components/ImageComponent";
 
 const Loading = styled.div`
   margin: 5em auto;

@@ -1,28 +1,16 @@
 import React, { Component } from 'react';
 
 import './style/style.css';
-import { Link } from "react-router-dom";
-import Header from './ui/Header';
+import Header from './ui/Header/Header';
 
 class App extends Component {
   render() {
     return (
       <div>
-        {/*<header>*/}
-          {/*<div className="container"><h1>OMDb API</h1></div>*/}
-        {/*</header>*/}
-        <Header/>
         <div className="container">
           <div className="row">
-            <div className="col-sm-4">
-              <Link className="btn btn-primary float-left mb-5" to={'/'}>
-                Go to movies
-              </Link>
-            </div>
-            <div className="col-sm-4">
-              <Link className="btn btn-primary float-left mb-5" to={'/img'}>
-                Go to img
-              </Link>
+            <div className="col">
+              <Header/>
             </div>
           </div>
         </div>

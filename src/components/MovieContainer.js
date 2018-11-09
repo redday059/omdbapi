@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Movie from "../ui/Movie";
+import Movie from "../ui/Movie/Movie";
 import {OMDB_URL} from "../constants";
 import configWebfonts from "../config/webfonts-movie";
 import WebfontLoader from "./WebfontLoader";

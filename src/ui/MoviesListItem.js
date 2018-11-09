@@ -10,13 +10,15 @@ const MoviesListItem = (props) => {
     <div className="col-12 col-md-6 card" key={imdbID}>
       <div className="row p-3">
         <div className="col-3">
-          <ImageComponent
+          {Poster !== 'N/A' ?
+            <ImageComponent
             src={{ default: Poster }}
             alt='movie poster'
             width='100%'
             className='image-preview'
             withPreloader={true}
-          />
+            />
+              : <div>No image</div>}
         </div>
         <div className="col-9">
           <dl className="row">

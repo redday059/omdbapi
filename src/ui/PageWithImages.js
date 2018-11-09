@@ -56,7 +56,13 @@ const PageWithImages = () => <React.Fragment>
       <li className="list-group-item">Checks for webp support, with fallback to jpg</li>
       <li className="list-group-item">Supports multiple sources with breakpoints</li>
       <li className="list-group-item">Supports retina displays</li>
-      <li className="list-group-item">UX: could be loaded progressively or with pre-loader</li>
+      <li className="list-group-item">
+        UX: optionally could be loaded progressively (uses base64 inlined thumb) or with pre-loader
+      </li>
+      <li className="list-group-item">
+        Source files: run 'yarn images' and with a help of 'sharp' images are converted to multiple
+        sizes (configurable via the corresponding constant) in two formats: jpg and webP
+      </li>
     </ul>
   </div>
   <Wrapper>

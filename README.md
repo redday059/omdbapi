@@ -1,14 +1,20 @@
-To get it up and runnign you need just:
+To get it up and running you need just:
 
 1. yarn
 2. yarn start
 
 It will try and connect to a public API from http://www.omdbapi.com/
 
-Main features
-- Lazy loaded images 
+Main features:
+- Lazy loaded images with Image component that supports: webp images with fallback to jpg, responsive images, retina responsive images; progressive image loading / preloader; suitable to Intrinsic Web Design. Images are produced by a simple script and third part library.
 - Async loading of the pages by demand
 - Font loader
+- http://www.omdbapi.com/ => two views: 
+ 1. search form, list of Items (image, title, button), load more button. Uses ImageComponent with an option to be shown with preloader.
+ 2. single Item with images with preloader and all the other fields provided. Uses ImageComponent in the same way as a view mentioned above.
+
+(Project contains some number of css files that shouldn't be where they are. It's a small project that uses bootstrap, and It's inconsistent in terms of using css.)
+
 
 
 
